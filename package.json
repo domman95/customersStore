@@ -1,7 +1,7 @@
 {
   "name": "customersstore",
   "version": "0.1.0",
-  "homepage": "http://domman95.github.io/test2",
+  "homepage": "http://domman95.github.io/customersstore",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
