@@ -1,0 +1,1057 @@
+.customerDetails
+    position: relative
+    min-height: 100vh
+    background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+    padding-bottom: 50px
+
+    & .customerHasBeenDeleted,
+    & .loadingCustomerDetailsPage
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 200px
+        height: 150px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        & p
+            color: white
+            fonts: 1.1em
+
+
+    & .customerNameAndBackBtn
+        position: absolute
+        top: 10px
+        left: 10px
+        height: 10vh
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        & p
+            font-size: $mobileHeaderFontSize
+            color: white
+            text-transform: uppercase
+            letter-spacing: 2px
+
+        & i
+            padding: 0 10px
+            font-size: $mobileIconFontSize
+            color: white
+
+    & .customerDetailsHeader 
+        padding-top: 10vh 
+        
+    & .phoneCustomer
+        width: 100%
+        padding: 20px 0 10px 0
+        display: flex
+        justify-content: center
+        align-items: center
+
+        & a
+            font-size: $mobileHeaderFontSize
+            color: white
+            text-decoration: none
+            text-transform: uppercase
+            letter-spacing: 2px
+
+        & i
+            margin-right: 10px
+            font-size: $mobileHeaderFontSize
+            color: white
+
+    & .btnsPanel
+        padding: 10px 0
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin-bottom: 20px
+
+        & .btn
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 5px 10px
+            border: 2px solid white
+            border-radius: 4px
+            color: white
+            font-size: 1.7em
+
+            & span
+                padding-left: 5px
+                font-size: .6em
+
+    & .customerVisits
+
+        & .singleVisit
+            position: relative
+            border-top-left-radius: 4px
+            border-bottom-left-radius: 4px
+            border-bottom-right-radius: 4px
+            width: 90vw
+            border: 2px solid white
+            margin: 50px auto 0 auto
+            padding: 20px 0 40px 10px
+
+            & .singleVisitHeader
+                position: absolute
+                display: flex
+                align-items: center
+                transform: translateY(-100%)
+                border: 2px solid white
+                padding-left: 5px
+                right: -2px
+                top: 0
+                border-top-left-radius: 4px
+                border-top-right-radius: 4px
+
+                & p
+                    font-size: 0.8em
+                    color: white
+                    text-transform: uppercase
+                    letter-spacing: 2px
+
+                & i
+                    font-size: 1.7em
+                    padding: 0 5px
+                    color: white
+
+            & .singleVisitInfo
+                color: white
+                font-size: 1.3em
+
+            & .createdBy
+                position: absolute
+                right: 5px
+                bottom: 0
+                color: white
+
+    & .noVisit
+        padding: 20px
+        text-align: center
+        
+        & h1
+            color: white
+            margin-bottom: 20px
+
+        & .addFirstVisit
+            border: 2px solid white
+            border-radius: 4px
+            background-color: transparent
+            color: white
+            font-size: 1.3em
+            padding: 5px 10px
+
+// @media (orientation: portrait) and ( min-width: 500px ) and (max-width: 1024px)
+
+// @media (orientation: portrait) and ( min-width: 768px )
+
+@media (orientation: landscape) and ( max-width: 640px )
+    .customerDetails
+        background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+
+@media (orientation: landscape) and ( min-width: 641px ) and (max-width: 812px)
+    .customerDetails
+        background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+
+@media (orientation: landscape) and ( min-width: 813px ) and (max-width: 1280px)
+    .customerDetails
+        background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+
+        & .customerNameAndBackBtn
+            & p
+                font-size: 3em
+
+            & i
+                font-size: 4em
+        
+        & .customerDetailsHeader
+
+        & .phoneCustomer
+            width: 100%
+            padding: 20px 0 10px 0
+            display: flex
+            justify-content: center
+            align-items: center
+
+            & a
+                font-size: 2.7em
+
+            & i
+                font-size: 3em
+
+        & .btnsPanel
+            & .btn
+                font-size: 2.2em
+
+                & span
+                    font-size: 0.9em
+        
+        & .customerVisits
+
+            & .singleVisit
+
+                & .singleVisitHeader
+                    & p
+                        font-size: 1.2em
+
+                    & i
+                        font-size: 2.2em
+
+                & .singleVisitInfo
+                    font-size: 1.7em
+
+                & .createdBy
+                    right: 10px
+                    bottom: 5px
+
+        & .noVisit
+            padding: 20px
+            text-align: center
+
+            & h1
+                color: white
+                margin-bottom: 20px
+                font-size: 3em
+
+            & .addFirstVisit
+                border: 2px solid white
+                border-radius: 4px
+                background-color: transparent
+                color: white
+                font-size: 1.5em
+                padding: 5px 10px
+
+@media (orientation: landscape) and ( min-width: 1281px )
+    .customerDetails
+        background: url(../img/main1920.jpg)
+        background-size: center
+        background-attachment: fixed
+
+        & .customerNameAndBackBtn
+            & p
+                font-size: 3em
+
+            & i
+                font-size: 4em
+        
+        & .customerDetailsHeader
+
+        & .phoneCustomer
+            width: 100%
+            padding: 20px 0 10px 0
+            display: flex
+            justify-content: center
+            align-items: center
+
+            & a
+                font-size: 2.7em
+
+            & i
+                font-size: 3em
+
+        & .btnsPanel
+            & .btn
+                font-size: 2.2em
+
+                & span
+                    font-size: 0.9em
+        
+        & .customerVisits
+
+            & .singleVisit
+
+                & .singleVisitHeader
+                    & p
+                        font-size: 1.2em
+
+                    & i
+                        font-size: 2.2em
+
+                & .singleVisitInfo
+                    font-size: 1.7em
+
+                & .createdBy
+                    right: 10px
+                    bottom: 5px
+
+        & .noVisit
+            padding: 20px
+            text-align: center
+
+            & h1
+                color: white
+                margin-bottom: 20px
+                font-size: 3em
+
+            & .addFirstVisit
+                border: 2px solid white
+                border-radius: 4px
+                background-color: transparent
+                color: white
+                font-size: 1.5em
+                padding: 5px 10px
+
+            
+            
+                
+
+
+ 
+
+            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // .customerDetails
+//     background-image: url(../img/main.jpg)
+//     background-size: center
+//     display: flex
+//     flex-direction: column
+//     justify-content: flex-start
+//     min-height: 100vh
+
+//     & .customerDetailsHeader
+//         position: fixed
+//         top: 0
+//         left: 0
+//         width: 100vw
+//         display: flex
+//         justify-content: flex-start
+//         align-items: center
+//         height: 10vh
+//         transition: .3s
+
+//         & .pageInfo,
+//         & .btnsPanel
+//             display: flex
+//             align-items: center
+//             margin: 0 30px 0 0
+
+//             & .phoneCustomer
+//                 display: flex
+//                 justify-content: center
+//                 align-items: center
+//                 padding: 0 10px
+//                 animation: bgcChanger 5s infinite 
+
+//                 & i,
+//                 & p
+//                     margin: 0 5px
+
+//             & .btn
+//                 display: flex
+//                 margin: 0 20px
+//                 border-radius: 4px
+//                 font-size: .9em
+//                 box-shadow: 0 0 3px rgb(255,255,255)
+//                 transition: .3s
+
+//                 &:hover
+//                     background-color: rgba(255,255,255, .6)
+
+//         & p
+//             color: white
+//             font-size: 2.3em
+//             text-transform: uppercase
+
+//         & .backBtn  
+//             display: flex
+//             height: 50px
+//             margin: 0 30px
+
+//         & i
+//             color: white
+//             font-size: 3em
+
+//     & .noVisit
+//         color: white
+//         width: 100%
+//         margin-top: 20vh
+//         display: flex
+//         justify-content: center
+//         flex-direction: column
+//         align-items: center
+
+//         & h1
+//             font-size: 2.7em
+//             margin-bottom: 20px
+
+//         & .addFirstVisit       
+//             box-shadow: 0 0 3px rgb(255,255,255)
+//             margin: 10px
+//             width: 300px
+//             height: 70px
+//             background-color: rgba(255,255,255, .3)
+//             border: none
+//             border-radius: 4px
+//             outline-color: green
+//             font-size: 1.6em
+//             color: white
+//             text-align: center
+//             cursor: pointer
+//             transition: .3s
+
+//             &:hover
+//                 background-color: rgba(255,255,255, .6)
+
+//             &::placeholder
+//                 color: white
+
+//     & .customerVisits
+//         margin-top: 15vh
+//         flex-direction: column
+//         display: flex
+//         justify-content: space-between
+//         align-items: center
+//         width: 100%
+//         min-height: 70%
+//         padding: 20px 0
+
+//         & .singleVisit
+//             background-color: rgba(255,255,255,.3)
+//             box-shadow: 0 0 3px rgb(255,255,255)
+//             border-radius: 4px
+//             margin: 30px
+//             width: 70%
+//             min-height: 100px
+//             position: relative
+//             padding-top: 30px
+//             padding-bottom: 30px
+
+//             & .singleVisitInfo
+//                 padding-left: 20px
+//                 font-size: 1.6em
+//                 color: white
+
+//             & .createdBy
+//                 position: absolute
+//                 right: 20px
+//                 bottom: 10px
+//                 color: white
+    
+//             & .singleVisitHeader
+//                 position: absolute
+//                 top: -20px
+//                 right: 20px
+//                 padding: 0 10px
+//                 display: flex
+//                 justify-content: center
+//                 align-items: center
+//                 color: black
+//                 height: 40px
+
+//                 & .singleVisitText
+//                     padding: 0 10px
+//                     color: black
+//                     font-weight: bold
+
+//                 & .singleVisitText,
+//                 & .singleVisitDeleteBtn
+//                     border-radius: 4px
+//                     display: flex
+//                     height: 100%
+//                     align-items: center
+//                     margin: 0 0 0 10px
+//                     box-shadow: 0 0 3px rgb(255,255,255)
+//                     background-color: rgb(255,255,255)
+//                     color: black
+//                     font-size: 1.2em
+                    
+//                     & button
+//                         background-color: rgb(255,255,255)
+//                         border-radius: 4px
+//                         border: none
+//                         display: flex
+//                         justify-content: center
+//                         align-items: center
+//                         height: 100%
+//                         width: 40px
+//                         cursor: pointer
+//                         outline: none
+                        
+//                         & i
+//                             color: black
+//                             font-size: 2.4em
+
+// @keyframes bgcChanger
+//     0%
+//         background-color: transparent
+        
+//     50%
+//         background-color: rgba(255,255,255,.3)
+    
+//     100%
+//         background-color: transparent
+
+// @media (orientation: portrait) and ( max-width: 414px  )
+//     .customerDetails
+//         background-image: url(../img/mainMINI.png)
+//         background-size: cover
+
+//         & .customerDetailsHeader
+//             flex-direction: column
+
+//             & .btnsPanel
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .btnsPanel
+//                 margin: 0 20px 10px 0
+//                 width: 100%
+
+//                 & .phoneCustomer
+//                     padding: 0 10px
+
+//                     & i,
+//                     & p
+//                         font-size: 1em
+
+//                 & .btn
+//                     font-size: 0.9em
+
+//             & p
+//                 font-size: 1.2em
+
+//             & .backBtn  
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 20px
+
+//             & i
+//                 font-size: 2em
+                
+//         & .noVisit
+//             width: 100%
+//             margin-top: 20vh
+//             display: flex
+//             justify-content: center
+//             flex-direction: column
+//             align-items: center
+
+//             & h1
+//                 font-size: 2.2em
+//                 text-align: center
+
+//             & .addFirstVisit       
+//                 width: 200px
+//                 height: 50px
+//                 font-size: 1.1em
+
+//         & .customerVisits
+//             width: 100%
+
+//             & .singleVisit
+//                 width: 80%
+//                 min-height: 100px
+//                 padding-bottom: 40px
+
+//                 & .singleVisitInfo
+//                     padding-left: 10px
+//                     font-size: 1em
+
+//                 & .createdBy
+//                     right: 10px
+//                     bottom: 5px
+//                     font-size: 0.8em
+        
+//                 & .singleVisitHeader
+//                     top: -15px
+//                     right: 0px
+//                     padding: 0 10px
+//                     height: 30px
+
+//                     & .singleVisitText
+//                         padding: 0 5px
+
+//                     & .singleVisitText,
+//                     & .singleVisitDeleteBtn
+//                         font-size: 0.8em
+
+//                         & button
+//                             width: 30px
+                        
+//                             & i
+//                                 font-size: 2em
+
+// @media (orientation: portrait) and (min-width: 415px) and ( max-width: 1024px )
+//     .customerDetails
+//         background-image: url(../img/mainMINI.png)
+//         background-size: cover
+
+//         & .customerDetailsHeader
+//             flex-direction: column
+
+//             & .btnsPanel
+//                 justify-content: center
+//                 padding-top: 20px
+
+//             & .pageInfo,
+//             & .btnsPanel
+//                 margin: 0 20px 10px 0
+//                 width: 100%
+
+//                 & .phoneCustomer
+//                     padding: 0 10px
+
+//                     & i,
+//                     & p
+//                         font-size: 1.3em
+
+//                 & .btn
+//                     font-size: 1.4em
+
+//             & p
+//                 font-size: 2em
+
+//             & .backBtn  
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 20px
+
+//             & i
+//                 font-size: 2em
+                
+//         & .noVisit
+//             width: 100%
+//             margin-top: 20vh
+//             display: flex
+//             justify-content: center
+//             flex-direction: column
+//             align-items: center
+
+//             & h1
+//                 font-size: 2.2em
+//                 text-align: center
+
+//             & .addFirstVisit       
+//                 width: 200px
+//                 height: 50px
+//                 font-size: 1.1em
+
+//         & .customerVisits
+//             width: 100%
+
+//             & .singleVisit
+//                 width: 80%
+//                 min-height: 100px
+//                 padding-bottom: 40px
+
+//                 & .singleVisitInfo
+//                     padding-left: 10px
+//                     font-size: 1.3em
+
+//                 & .createdBy
+//                     right: 10px
+//                     bottom: 5px
+//                     font-size: 1em
+        
+//                 & .singleVisitHeader
+//                     top: -15px
+//                     right: 5px
+//                     padding: 0 10px
+//                     height: 30px
+
+//                     & .singleVisitText
+//                         padding: 0 5px
+
+//                     & .singleVisitText,
+//                     & .singleVisitDeleteBtn
+//                         font-size: 1em
+
+//                         & button
+//                             width: 30px
+                        
+//                             & i
+//                                 font-size: 2em
+
+// @media (orientation: landscape) and ( max-width: 640px )
+//     .customerDetails
+//         background-image: url(../img/mainMINI.png)
+//         background-size: cover
+
+//         & .customerDetailsHeader
+//             flex-direction: column
+
+//             & .btnsPanel
+//                 padding-top: 10px
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .btnsPanel
+//                 margin: 0 20px 10px 0
+//                 width: 100%
+
+//                 & .phoneCustomer
+//                     padding: 0 10px
+
+//                     & i,
+//                     & p
+//                         font-size: 1.3em
+
+//                 & .btn
+//                     font-size: 1.1em
+
+//             & p
+//                 font-size: 1.5em
+
+//             & .backBtn  
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 20px
+
+//             & i
+//                 font-size: 2em
+                
+//         & .noVisit
+//             width: 100%
+//             margin-top: 40vh
+//             display: flex
+//             justify-content: center
+//             flex-direction: column
+//             align-items: center
+
+//             & h1
+//                 font-size: 2.2em
+//                 text-align: center
+
+//             & .addFirstVisit       
+//                 width: 200px
+//                 height: 50px
+//                 font-size: 1.1em
+
+//         & .customerVisits
+//             padding-top: 70px
+//             width: 100%
+
+//             & .singleVisit
+//                 width: 80%
+//                 min-height: 100px
+//                 padding-bottom: 40px
+
+//                 & .singleVisitInfo
+//                     padding-left: 10px
+//                     font-size: 1em
+
+//                 & .createdBy
+//                     right: 10px
+//                     bottom: 5px
+//                     font-size: 0.8em
+        
+//                 & .singleVisitHeader
+//                     top: -15px
+//                     right: 0px
+//                     padding: 0 10px
+//                     height: 30px
+
+//                     & .singleVisitText
+//                         padding: 0 5px
+
+//                     & .singleVisitText,
+//                     & .singleVisitDeleteBtn
+//                         font-size: 0.8em
+
+//                         & button
+//                             width: 30px
+                        
+//                             & i
+//                                 font-size: 2em
+
+// @media (orientation: landscape) and (min-width: 641px) and ( max-width: 823px )
+//     .customerDetails
+//         background-image: url(../img/main640.jpg)
+//         background-size: cover
+
+//         & .customerDetailsHeader
+//             flex-direction: column
+
+//             & .btnsPanel
+//                 padding-top: 10px
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .btnsPanel
+//                 margin: 0 20px 10px 0
+//                 width: 100%
+
+//                 & .phoneCustomer
+//                     padding: 0 10px
+
+//                     & i,
+//                     & p
+//                         font-size: 1.3em
+
+//                 & .btn
+//                     font-size: 1.1em
+
+//             & p
+//                 font-size: 1.5em
+
+//             & .backBtn  
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 20px
+
+//             & i
+//                 font-size: 2em
+                
+//         & .noVisit
+//             width: 100%
+//             margin-top: 40vh
+//             display: flex
+//             justify-content: center
+//             flex-direction: column
+//             align-items: center
+
+//             & h1
+//                 font-size: 2.2em
+//                 text-align: center
+
+//             & .addFirstVisit       
+//                 width: 200px
+//                 height: 50px
+//                 font-size: 1.1em
+
+//         & .customerVisits
+//             padding-top: 70px
+//             width: 100%
+
+//             & .singleVisit
+//                 width: 80%
+//                 min-height: 100px
+//                 padding-bottom: 40px
+
+//                 & .singleVisitInfo
+//                     padding-left: 10px
+//                     font-size: 1em
+
+//                 & .createdBy
+//                     right: 10px
+//                     bottom: 5px
+//                     font-size: 0.8em
+        
+//                 & .singleVisitHeader
+//                     top: -15px
+//                     right: 0px
+//                     padding: 0 10px
+//                     height: 30px
+
+//                     & .singleVisitText
+//                         padding: 0 5px
+
+//                     & .singleVisitText,
+//                     & .singleVisitDeleteBtn
+//                         font-size: 0.8em
+
+//                         & button
+//                             width: 30px
+                        
+//                             & i
+//                                 font-size: 2em
+
+// @media (orientation: landscape) and (min-width: 824px) and ( max-width: 1280px )
+//     .customerDetails
+//         background-image: url(../img/main1280.jpg)
+//         background-size: cover
+
+//         & .customerDetailsHeader
+//             position: fixed
+//             top: 0
+//             left: 0
+//             width: 100vw
+//             display: flex
+//             justify-content: flex-start
+//             align-items: center
+//             height: 10vh
+//             transition: .3s
+
+//             & .pageInfo,
+//             & .btnsPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 30px 0 0
+
+//             & .phoneCustomer
+//                 padding: 0 10px
+
+//                 & i,
+//                 & p
+//                     font-size: 1.5em
+
+//                 & .btn
+//                     font-size: 1.2em
+
+//             & p
+//                 font-size: 1.9em
+
+//             & .backBtn  
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 20px
+
+//             & i
+//                 font-size: 2.4em
+                
+//         & .noVisit
+//             width: 100%
+//             margin-top: 40vh
+//             display: flex
+//             justify-content: center
+//             flex-direction: column
+//             align-items: center
+
+//             & h1
+//                 font-size: 2.2em
+//                 text-align: center
+
+//             & .addFirstVisit       
+//                 width: 200px
+//                 height: 50px
+//                 font-size: 1.1em
+
+//         & .customerVisits
+//             padding-top: 20px
+//             width: 100%
+
+//             & .singleVisit
+//                 width: 80%
+//                 min-height: 100px
+//                 padding-bottom: 40px
+
+//                 & .singleVisitInfo
+//                     padding-left: 10px
+//                     font-size: 1.6em
+
+//                 & .createdBy
+//                     right: 15px
+//                     bottom: 5px
+//                     font-size: 1em
+        
+//                 & .singleVisitHeader
+//                     top: -20px
+//                     right: 10px
+//                     padding: 0 10px
+//                     height: 40px
+
+//                     & .singleVisitText
+//                         padding: 0 10px
+
+//                     & .singleVisitText,
+//                     & .singleVisitDeleteBtn
+//                         font-size: 1.2em
+
+//                         & button
+//                             width: 40px
+                        
+//                             & i
+//                                 font-size: 2.3em
+
+// @media (orientation: landscape) and (min-width: 1281px) and ( max-width: 1380px )
+//     .customerDetails
+//         background-image: url(../img/main1280.jpg)
+//         background-size: cover
+
+//         & .customerDetailsHeader
+
+//             & .pageInfo,
+//             & .btnsPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 30px 0 0
+
+//                 & .phoneCustomer
+//                     padding: 0 10px
+
+//                     & i,
+//                     & p
+//                         font-size: 1.5em
+
+//                 & .btn
+//                     font-size: 1.2em
+
+//             & p
+//                 font-size: 1.9em
+
+//             & .backBtn  
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 20px
+
+//             & i
+//                 font-size: 2.4em
+                
+//         & .noVisit
+//             width: 100%
+//             margin-top: 40vh
+//             display: flex
+//             justify-content: center
+//             flex-direction: column
+//             align-items: center
+
+//             & h1
+//                 font-size: 2.2em
+//                 text-align: center
+
+//             & .addFirstVisit       
+//                 width: 200px
+//                 height: 50px
+//                 font-size: 1.1em
+
+//         & .customerVisits
+//             padding-top: 20px
+//             width: 100%
+
+//             & .singleVisit
+//                 width: 80%
+//                 min-height: 100px
+//                 padding-bottom: 40px
+
+//                 & .singleVisitInfo
+//                     padding-left: 10px
+//                     font-size: 1.6em
+
+//                 & .createdBy
+//                     right: 15px
+//                     bottom: 5px
+//                     font-size: 1em
+        
+//                 & .singleVisitHeader
+//                     top: -20px
+//                     right: 10px
+//                     padding: 0 10px
+//                     height: 40px
+
+//                     & .singleVisitText
+//                         padding: 0 10px
+
+//                     & .singleVisitText,
+//                     & .singleVisitDeleteBtn
+//                         font-size: 1.2em
+
+//                         & button
+//                             width: 40px
+                        
+//                             & i
+//                                 font-size: 2.3em

@@ -1,0 +1,733 @@
+.customers
+    position: relative
+    min-height: 100vh
+    background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+    padding-top: 100px
+    padding-bottom: 50px
+
+    & .customersHeader
+        position: absolute
+        top: 10px
+        left: 10px
+        height: 10vh
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        & p
+            font-size: $mobileHeaderFontSize
+            color: white
+            text-transform: uppercase
+            letter-spacing: 2px
+
+        & i
+            padding: 0 10px
+            font-size: $mobileIconFontSize
+            color: white
+
+    & .searchCustomersPanel
+        text-align: center
+        margin-bottom: 20px
+
+        & .searchCustomer
+            border-radius: 4px
+            border: none
+            box-shadow: $mobileBoxShadow
+            width: 280px
+            height: 40px
+            text-align: center
+            outline: none
+
+    & .customerCards
+
+        & h1
+            color: white
+            font-size: 1.7em
+            padding-top: 50px
+            text-align: center
+
+        & ul
+            width: 90vw
+            position: relative
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: 20px auto 0 auto
+            padding-top: 40px
+
+            & p
+                position: absolute
+                top: 5px
+                left: 0
+                color: white
+                font-weight: bold
+                font-size: $mobileHeaderFontSize
+
+
+            & li
+                width: 85vw
+                min-height: 40px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 0 10px
+                margin: 10px 0
+                list-style-type: none
+                border-radius: 4px
+                border: 2px solid white
+                font-size: 1.1em
+
+                &:hover
+                    color: black
+                    background-color: white
+
+                    
+@media (orientation: portrait) and ( max-width: 500px )
+    .customers
+        & .customerCards
+            & ul
+                & li
+                    font-size: 1em
+    
+
+@media (orientation: portrait) and ( min-width: 500px ) and (max-width: 768px)
+    .customers
+        & .customersHeader
+            & p
+                font-size: 4em
+
+            & i
+                font-size: 5em
+
+        & .searchCustomersPanel
+            margin-top: 40px
+            text-align: center
+            margin-bottom: 40px
+
+            & .searchCustomer
+                width: 500px
+                height: 60px
+                font-size: 1.7em
+
+        & .customerCards
+
+            & ul
+                & p
+                    top: 0
+                    font-size: 2.2em
+
+
+                & li
+                    font-size: 1.7em
+
+@media (orientation: portrait) and ( min-width: 769px )
+    .customers
+        & .customersHeader
+            & p
+                font-size: 4em
+
+            & i
+                font-size: 5em
+
+        & .searchCustomersPanel
+            margin-top: 50px
+            text-align: center
+            margin-bottom: 40px
+
+            & .searchCustomer
+                width: 550px
+                height: 60px
+                font-size: 1.7em
+
+        & .customerCards
+
+            & ul
+                & p
+                    top: -5px
+                    left: -5px
+                    font-size: 2.5em
+
+
+                & li
+                    font-size: 1.9em
+
+@media (orientation: landscape) and ( max-width: 640px )
+    .customers
+        background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+
+@media (orientation: landscape) and ( min-width: 641px ) and (max-width: 812px)
+    .customers
+        background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+
+
+@media (orientation: landscape) and ( min-width: 813px ) and (max-width: 1280px)
+    .customers
+        background: linear-gradient(-45deg, rgb(150,150,150), rgb(100,100,100), rgb(50,50,50,))
+
+        & .customersHeader
+            & p
+                font-size: 3em
+
+            & i
+                font-size: 4em
+        
+        & .searchCustomersPanel
+            text-align: center
+            margin-bottom: 20px
+
+            & .searchCustomer
+                width: 500px
+                height: 60px
+                font-size: 1.7em
+
+        & .customerCards
+
+            & ul
+                & p
+                    top: 0
+                    font-size: 2.2em
+
+                & li
+                    font-size: 1.9em
+
+@media (orientation: landscape) and ( min-width: 1281px )
+    .customers
+        background: url(../img/main1920.jpg)
+        background-size: center
+        background-attachment: fixed
+
+        & .customersHeader
+            & p
+                font-size: 3em
+
+            & i
+                font-size: 4em
+        
+        & .searchCustomersPanel
+            text-align: center
+            margin-bottom: 20px
+
+            & .searchCustomer
+                width: 550px
+                height: 60px
+                font-size: 1.7em
+
+        & .customerCards
+
+            & ul
+                & p
+                    top: 0
+                    font-size: 2.2em
+
+
+                & li
+                    font-size: 2.1em
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    // .customers
+//     background-image: url(../img/main.jpg)
+//     background-size: center
+//     background-attachment: fixed
+//     display: flex
+//     flex-direction: column
+//     justify-content: flex-start
+//     min-height: 100vh
+
+//     & .customersHeader
+//         z-index: 2
+//         position: fixed
+//         top: 0
+//         left: 0
+//         width: 100vw
+//         display: flex
+//         justify-content: flex-start
+//         align-items: center
+//         height: 10vh
+//         transition: .3s
+
+//         & .searchCustomersPanel
+//             position: absolute
+//             top: 50%
+//             left: 50%
+//             transform: translate(-50%, -50%)
+
+//         & .pageInfo
+//             margin: 0 30px 0 0
+
+//         & .pageInfo,
+//         & .searchCustomersPanel
+//             display: flex
+//             align-items: center
+        
+
+//             & .searchCustomer
+//                 width: 400px
+//                 height: 50px
+//                 margin: 0 30px
+//                 box-shadow: 0 0 3px rgb(255,255,255)
+//                 background-color: rgba(255,255,255, .3)
+//                 border: 2px solid white
+//                 border-radius: 4px
+//                 font-size: 1.2em
+//                 outline: none
+//                 color: white
+//                 text-align: center
+
+//                 &::placeholder
+//                     color: white
+
+//             & p
+//                 color: white
+//                 font-size: 2.3em
+//                 text-transform: uppercase
+
+//             & .backBtn  
+//                 height: 50px
+//                 margin: 0 30px
+
+//             & i
+//                 color: white
+//                 font-size: 3em
+
+    
+//     & .customersPanel
+//         margin-top: 15vh
+//         flex-direction: column
+//         display: flex
+//         justify-content: space-between
+//         align-items: center
+//         width: 100%
+//         min-height: 70%
+//         padding: 20px 0
+
+//         & .customerCards
+//             display: flex
+//             flex-direction: column
+//             align-items: center
+//             justify-content: flex-start
+//             width: 100%
+
+//             & h1
+//                 color: white
+
+//             & .eachLetterCustomersCard
+//                 background-color: rgba(255,255,255,.3)
+//                 box-shadow: 0 0 3px rgb(255,255,255)
+//                 border-radius: 4px
+//                 margin: 20px
+//                 width: 70%
+//                 position: relative
+//                 padding-top: 30px
+
+//                 & p
+//                     position: absolute
+//                     top: -20px
+//                     right: 20px
+//                     box-shadow: 0 0 3px rgb(255,255,255)
+//                     background-color: rgb(255,255,255)
+//                     border-radius: 4px
+//                     width: 40px
+//                     height: 40px
+//                     font-size: 2em
+//                     display: flex
+//                     justify-content: center
+//                     align-items: center
+//                     color: black
+
+//                 & li
+//                     display: flex
+//                     justify-content: space-between
+//                     list-style-type: none
+//                     font-size: 1.4em
+//                     margin: 0 20px 20px 20px
+//                     transition: .3s
+//                     border-radius: 4px
+//                     padding: 0 20px
+//                     background-color: rgba(255,255,255,.3)
+//                     color: black
+//                     font-weight: bold
+
+//                     &:hover
+//                         background-color: #fff
+
+// @media (orientation: portrait) and ( max-width: 414px )
+//     .customers
+//         background: url(../img/mainMINI.png)
+//         background-attachment: fixed
+
+//         & .customersHeader
+//             flex-direction: column
+//             height: 20vh
+
+//             & .searchCustomersPanel
+//                 padding-top: 20px
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .searchCustomersPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 0 30px 0
+//                 width: 100%
+
+//                 & .searchCustomer
+//                     width: 200px
+//                     height: 40px
+//                     margin: 0 20px
+//                     font-size: 0.9em
+//                 & p
+//                     color: white
+//                     font-size: 1.4em
+//                     text-transform: uppercase
+
+//                 & .backBtn  
+//                     display: flex
+//                     align-items: center
+//                     height: 50px
+//                     margin: 0 20px
+
+//                 & i
+//                     color: white
+//                     font-size: 2em
+
+//         & .customersPanel
+//             margin-top: 15vh
+//             width: 100%
+            
+//             & .customerCards
+//                 & .eachLetterCustomersCard
+//                     margin: 20px
+//                     width: 90%
+
+//                     & li
+//                         font-size: 0.9em
+//                         margin: 0 10px 20px 10px
+//                         padding: 0 10px
+
+// @media (orientation: portrait) and (min-width: 415px) and ( max-width: 1024px )
+//     .customers
+//         background: url(../img/mainMINI.png)
+//         background-attachment: fixed
+//         background-size: cover
+
+//         & .customersHeader
+//             flex-direction: column
+//             height: 20vh
+//             padding-top: 10px
+
+//             & .searchCustomersPanel
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .searchCustomersPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0 0 30px 0
+//                 width: 100%
+
+//                 & .searchCustomer
+//                     width: 400px
+//                     height: 60px
+//                     margin: 0 20px
+//                     font-size: 1.2em
+
+//                 & p
+//                     color: white
+//                     font-size: 2.3em
+//                     text-transform: uppercase
+
+//                 & .backBtn  
+//                     display: flex
+//                     align-items: center
+//                     height: 50px
+//                     margin: 0 20px
+
+//                 & i
+//                     color: white
+//                     font-size: 3em
+
+//         & .customersPanel
+//             margin-top: 20vh
+//             width: 100%
+            
+//             & .customerCards
+//                 & .eachLetterCustomersCard
+//                     margin: 20px
+//                     width: 90%
+
+//                     & li
+//                         font-size: 1.3em
+//                         margin: 0 10px 20px 10px
+//                         padding: 0 10px
+
+// @media (orientation: landscape) and ( max-width: 640px )
+//     .customers
+//         background: url(../img/main640.jpg)
+//         background-attachment: fixed
+
+//         & .customersHeader
+//             flex-direction: column
+//             height: 20vh
+
+//             & .searchCustomersPanel
+//                 padding-top: 10px
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .searchCustomersPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0
+//                 width: 100%
+
+//                 & .searchCustomer
+//                     width: 300px
+//                     height: 50px
+//                     margin: 0 20px
+//                     font-size: 1.1em
+
+//                 & p
+//                     color: white
+//                     font-size: 1.4em
+//                     text-transform: uppercase
+
+//                 & .backBtn  
+//                     display: flex
+//                     align-items: center
+//                     height: 50px
+//                     margin: 0 20px
+
+//                 & i
+//                     color: white
+//                     font-size: 2em
+
+//         & .customersPanel
+//             margin-top: 30vh
+//             width: 100%
+
+//             & .customerCards
+//                 & .eachLetterCustomersCard
+//                     margin: 20px
+//                     width: 90%
+
+//                     & li
+//                         font-size: 1.1em
+//                         margin: 0 10px 20px 10px
+//                         padding: 0 10px
+
+
+// @media (orientation: landscape) and (min-width: 641px) and ( max-width: 823px )
+//     .customers
+//         background: url(../img/main640.jpg)
+//         background-size: 100%
+//         background-attachment: fixed
+
+//         & .customersHeader
+//             flex-direction: column
+//             height: 20vh
+
+//             & .searchCustomersPanel
+//                 padding-top: 10px
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .searchCustomersPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0
+//                 width: 100%
+
+//                 & .searchCustomer
+//                     width: 300px
+//                     height: 50px
+//                     margin: 0 20px
+//                     font-size: 1.1em
+
+//                 & p
+//                     color: white
+//                     font-size: 1.4em
+//                     text-transform: uppercase
+
+//                 & .backBtn  
+//                     display: flex
+//                     align-items: center
+//                     height: 50px
+//                     margin: 0 20px
+
+//                 & i
+//                     color: white
+//                     font-size: 2em
+
+//         & .customersPanel
+//             margin-top: 30vh
+//             width: 100%
+
+//             & .customerCards
+//                 & .eachLetterCustomersCard
+//                     margin: 20px
+//                     width: 90%
+
+//                     & li
+//                         font-size: 1.1em
+//                         margin: 0 10px 20px 10px
+//                         padding: 0 10px
+
+
+// @media (orientation: landscape) and (min-width: 824px) and ( max-width: 1280px )
+//     .customers
+//         background: url(../img/main1280.jpg)
+//         background-size: cover
+//         background-attachment: fixed
+
+//         & .customersHeader
+//             flex-direction: column
+//             height: 20vh
+
+//             & .searchCustomersPanel
+//                 padding-top: 10px
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .searchCustomersPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0
+//                 width: 100%
+
+//                 & .searchCustomer
+//                     width: 300px
+//                     height: 50px
+//                     margin: 0 20px
+//                     font-size: 1.1em
+
+//                 & p
+//                     color: white
+//                     font-size: 1.8em
+//                     text-transform: uppercase
+
+//                 & .backBtn  
+//                     display: flex
+//                     align-items: center
+//                     height: 50px
+//                     margin: 0 20px
+
+//                 & i
+//                     color: white
+//                     font-size: 2em
+
+//         & .customersPanel
+//             margin-top: 20vh
+//             width: 100%
+
+//             & .customerCards
+//                 & .eachLetterCustomersCard
+//                     margin: 20px
+//                     width: 70%
+
+//                     & li
+//                         font-size: 1.3em
+//                         margin: 0 10px 20px 10px
+//                         padding: 0 10px
+
+// @media (orientation: landscape) and (min-width: 1281px) and ( max-width: 1380px )
+//     .customers
+//         background: url(../img/main1280.jpg)
+//         background-size: cover
+//         background-attachment: fixed
+
+//         & .customersHeader
+//             flex-direction: column
+//             height: 20vh
+
+//             & .searchCustomersPanel
+//                 padding-top: 10px
+//                 justify-content: center
+
+//             & .pageInfo,
+//             & .searchCustomersPanel
+//                 display: flex
+//                 align-items: center
+//                 margin: 0
+//                 width: 100%
+
+//                 & .searchCustomer
+//                     width: 400px
+//                     height: 50px
+//                     margin: 0 20px
+//                     font-size: 1.1em
+
+//                 & p
+//                     color: white
+//                     font-size: 1.8em
+//                     text-transform: uppercase
+
+//                 & .backBtn  
+//                     display: flex
+//                     align-items: center
+//                     height: 50px
+//                     margin: 0 20px
+
+//                 & i
+//                     color: white
+//                     font-size: 2em
+
+//         & .customersPanel
+//             margin-top: 15vh
+//             width: 100%
+
+//             & .customerCards
+//                 & .eachLetterCustomersCard
+//                     margin: 20px
+//                     width: 70%
+
+//                     & li
+//                         font-size: 1.4em
+//                         margin: 0 10px 20px 10px
+//                         padding: 0 10px
+
+
+
+
+                
+
+
+            
+
+
+
+                
+
+
+                        
+
+
+        
+                

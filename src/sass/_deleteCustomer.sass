@@ -1,0 +1,96 @@
+.popUpDeleteCustomer
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+    width: 100vw
+    position: fixed
+    background-color: rgba(0,0,0,.5)
+    z-index: 1
+    top: 0
+    left: 0
+
+    & .confirmDeleteCustomer
+        width: 500px
+        height: 300px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 30px
+        border-radius: 4px
+        background-color: rgba(255,255,255,1)
+        box-shadow: 0 0 3px white
+
+        & h3
+            font-size: 1.4em
+            color: black
+            text-align: center
+            padding: 0 0 20px 0
+            width: 100%
+
+        & .btns
+            width: 100%
+            max-height: 100px
+            display: flex
+            justify-content: center
+
+            & button
+                border-radius: 4px
+                border: 2px solid black
+                color: black
+                background-color: transparent
+                font-size: 1.4em
+                width: 120px
+                height: 40px
+                margin: 0 20px
+                cursor: pointer
+                    
+                &:hover
+                    transform: scale(1.05)
+
+@media (orientation: portrait) and ( max-width: 767px )
+    .popUpDeleteCustomer
+        & .confirmDeleteCustomer
+            width: 300px
+            height: 140px
+            padding: 10px
+            
+            & h3
+                font-size: 1em
+                padding: 0 0 10px 0
+
+            & .btns
+                max-height: 60px
+
+                & button
+                    font-size: 1em
+                    width: 80px
+                    height: 30px
+
+@media (orientation: landscape) and ( max-width: 823px )
+    .popUpDeleteCustomer
+        & .confirmDeleteCustomer
+            width: 300px
+            height: 140px
+            padding: 10px
+            
+            & h3
+                font-size: 1em
+                padding: 0 0 10px 0
+
+            & .btns
+                max-height: 60px
+
+                & button
+                    font-size: 1em
+                    width: 80px
+                    height: 30px
+
+
+
+
+
+    
+
+

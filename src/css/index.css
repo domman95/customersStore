@@ -1,0 +1,2202 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+  max-width: 100vw;
+}
+
+.root {
+  max-width: 100vw;
+}
+
+.dashboard {
+  position: relative;
+  height: 100vh;
+  background: url(../img/mainMINI.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 20vh;
+}
+
+.dashboard .menuBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.dashboard .navbar {
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+  top: 0;
+  left: -300px;
+  background: linear-gradient(-45deg, #969696, #646464, #323232);
+  -webkit-transition: 300ms left cubic-bezier(0.77, 1, 0.175, 1);
+  transition: 300ms left cubic-bezier(0.77, 1, 0.175, 1);
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.dashboard .navbar .signedOutLinks,
+.dashboard .navbar .signedInLinks {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.dashboard .navbar .signedOutLinks a,
+.dashboard .navbar .signedInLinks a {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard .navbar .signedOutLinks a li,
+.dashboard .navbar .signedInLinks a li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  color: white;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+.dashboard .navbar .signedOutLinks a li i,
+.dashboard .navbar .signedInLinks a li i {
+  font-size: 1.3em;
+  padding-right: 5px;
+}
+
+.dashboard .active {
+  left: 0;
+}
+
+.dashboard .header p {
+  padding: 10px 0 0 20px;
+  color: white;
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+.dashboard .header p:last-child {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 2.6em;
+  letter-spacing: 4px;
+}
+
+@media (orientation: portrait) and (min-width: 500px) and (max-width: 768px) {
+  .dashboard .menuBtn {
+    font-size: 4em;
+  }
+  .dashboard .navbar .signedOutLinks a li,
+  .dashboard .navbar .signedInLinks a li {
+    font-size: 1.7em;
+  }
+  .dashboard .header p {
+    font-size: 3.5em;
+  }
+  .dashboard .header p:last-child {
+    font-size: 4em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 769px) and (max-width: 1024px) {
+  .dashboard .menuBtn {
+    font-size: 4em;
+  }
+  .dashboard .navbar .signedOutLinks a li,
+  .dashboard .navbar .signedInLinks a li {
+    font-size: 1.9em;
+  }
+  .dashboard .header p {
+    font-size: 5em;
+  }
+  .dashboard .header p:last-child {
+    font-size: 5.8em;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .dashboard {
+    background: url(../img/main640.jpg);
+    background-size: cover;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 641px) and (max-width: 812px) {
+  .dashboard {
+    background: url(../img/main1280.jpg);
+    background-size: cover;
+  }
+  .dashboard .menuBtn {
+    font-size: 3.6em;
+  }
+  .dashboard .navbar .signedOutLinks a li,
+  .dashboard .navbar .signedInLinks a li {
+    font-size: 1.7em;
+  }
+  .dashboard .header p {
+    font-size: 3em;
+  }
+  .dashboard .header p:last-child {
+    font-size: 3.5em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 813px) and (max-width: 1280px) {
+  .dashboard {
+    background: url(../img/main1280.jpg);
+    background-size: cover;
+  }
+  .dashboard .menuBtn {
+    font-size: 4em;
+  }
+  .dashboard .navbar .signedOutLinks a li,
+  .dashboard .navbar .signedInLinks a li {
+    font-size: 1.7em;
+  }
+  .dashboard .header p {
+    font-size: 4.4em;
+  }
+  .dashboard .header p:last-child {
+    font-size: 5em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1281px) {
+  .dashboard {
+    background: url(../img/main1920.jpg);
+    background-size: cover;
+  }
+  .dashboard .menuBtn {
+    font-size: 4em;
+  }
+  .dashboard .navbar .signedOutLinks a li,
+  .dashboard .navbar .signedInLinks a li {
+    font-size: 1.7em;
+  }
+  .dashboard .header p {
+    font-size: 5em;
+  }
+  .dashboard .header p:last-child {
+    font-size: 6em;
+  }
+}
+
+.signIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100vh;
+  background: url(../img/mainMINI.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.signIn .signInHeader {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signIn .signInHeader p {
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.signIn .signInHeader i {
+  padding: 0 10px;
+  font-size: 2.5em;
+  color: white;
+}
+
+.signIn .signInPanel {
+  padding: 20px 0;
+}
+
+.signIn .signInPanel form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.signIn .signInPanel form input {
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  font-size: 1.1em;
+  outline: none;
+}
+
+.signIn .signInPanel form input::-webkit-input-placeholder {
+  color: white;
+}
+
+.signIn .signInPanel form input:-ms-input-placeholder {
+  color: white;
+}
+
+.signIn .signInPanel form input::-ms-input-placeholder {
+  color: white;
+}
+
+.signIn .signInPanel form input::placeholder {
+  color: white;
+}
+
+.signIn .signInPanel form .btn {
+  width: 100px;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.signIn .signInPanel form .btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .signIn .signInPanel form input {
+    border-width: 0.5px;
+    border-radius: 0;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 500px) and (max-width: 768px) {
+  .signIn .signInHeader p {
+    font-size: 4em;
+  }
+  .signIn .signInHeader i {
+    font-size: 5em;
+  }
+  .signIn .signInPanel form input {
+    width: 450px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+  .signIn .signInPanel form .btn {
+    width: 150px;
+    font-size: 1.7em;
+  }
+  .signIn .signInPanel form a {
+    font-size: 1.3em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 769px) and (max-width: 1024px) {
+  .signIn .signInHeader p {
+    font-size: 4.2em;
+  }
+  .signIn .signInHeader i {
+    font-size: 5.2em;
+  }
+  .signIn .signInPanel form input {
+    width: 550px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2.1em;
+  }
+  .signIn .signInPanel form .btn {
+    width: 180px;
+    font-size: 2em;
+  }
+  .signIn .signInPanel form a {
+    font-size: 1.7em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) and (max-width: 812px) {
+  .signIn {
+    background: url(../img/main640.jpg);
+    background-size: cover;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 813px) and (max-width: 1280px) {
+  .signIn {
+    background: url(../img/main1280.jpg);
+    background-size: cover;
+  }
+  .signIn .signInHeader p {
+    font-size: 3em;
+  }
+  .signIn .signInHeader i {
+    font-size: 4em;
+  }
+  .signIn .signInPanel form input {
+    width: 350px;
+    height: 50px;
+    margin: 10px 0;
+    font-size: 1.7em;
+  }
+  .signIn .signInPanel form .btn {
+    font-size: 1.5em;
+    width: 150px;
+  }
+  .signIn .signInPanel form a {
+    font-size: 1.3em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1281px) {
+  .signIn {
+    background: url(../img/main1920.jpg);
+    background-size: cover;
+  }
+  .signIn .signInHeader p {
+    font-size: 3em;
+  }
+  .signIn .signInHeader i {
+    font-size: 4em;
+  }
+  .signIn .signInPanel form input {
+    width: 450px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+  .signIn .signInPanel form .btn {
+    width: 150px;
+    font-size: 1.7em;
+  }
+  .signIn .signInPanel form a {
+    font-size: 1.7em;
+  }
+}
+
+.signUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100vh;
+  background: url(../img/mainMINI.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.signUp .signUpHeader {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signUp .signUpHeader p {
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.signUp .signUpHeader i {
+  padding: 0 10px;
+  font-size: 2.5em;
+  color: white;
+}
+
+.signUp .signUpPanel {
+  padding: 20px 0;
+}
+
+.signUp .signUpPanel form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.signUp .signUpPanel form input {
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  font-size: 1.1em;
+  outline: none;
+}
+
+.signUp .signUpPanel form input::-webkit-input-placeholder {
+  color: white;
+}
+
+.signUp .signUpPanel form input:-ms-input-placeholder {
+  color: white;
+}
+
+.signUp .signUpPanel form input::-ms-input-placeholder {
+  color: white;
+}
+
+.signUp .signUpPanel form input::placeholder {
+  color: white;
+}
+
+.signUp .signUpPanel form .btn {
+  width: 120px;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.signUp .signUpPanel form .btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .signUp .signUpPanel form input {
+    border-width: 0.5px;
+    border-radius: 0;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 500px) and (max-width: 768px) {
+  .signUp .signUpHeader p {
+    font-size: 4em;
+  }
+  .signUp .signUpHeader i {
+    font-size: 5em;
+  }
+  .signUp .signUpPanel form input {
+    width: 450px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+  .signUp .signUpPanel form .btn {
+    width: 190px;
+    font-size: 1.7em;
+  }
+  .signUp .signUpPanel form a {
+    font-size: 1.3em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 769px) and (max-width: 1024px) {
+  .signUp .signUpHeader p {
+    font-size: 4.2em;
+  }
+  .signUp .signUpHeader i {
+    font-size: 5.2em;
+  }
+  .signUp .signUpPanel form input {
+    width: 550px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2.1em;
+  }
+  .signUp .signUpPanel form .btn {
+    width: 210px;
+    font-size: 2em;
+  }
+  .signUp .signUpPanel form a {
+    font-size: 1.7em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) and (max-width: 812px) {
+  .signUp {
+    background: url(../img/main640.jpg);
+    background-size: cover;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 813px) and (max-width: 1280px) {
+  .signUp {
+    background: url(../img/main1280.jpg);
+    background-size: cover;
+  }
+  .signUp .signUpHeader p {
+    font-size: 3em;
+  }
+  .signUp .signUpHeader i {
+    font-size: 4em;
+  }
+  .signUp .signUpPanel form input {
+    width: 350px;
+    height: 50px;
+    margin: 10px 0;
+    font-size: 1.7em;
+  }
+  .signUp .signUpPanel form .btn {
+    font-size: 1.5em;
+    width: 170px;
+  }
+  .signUp .signUpPanel form a {
+    font-size: 1.3em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1281px) {
+  .signUp {
+    background: url(../img/main1920.jpg);
+    background-size: cover;
+  }
+  .signUp .signUpHeader p {
+    font-size: 3em;
+  }
+  .signUp .signUpHeader i {
+    font-size: 4em;
+  }
+  .signUp .signUpPanel form input {
+    width: 450px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+  .signUp .signUpPanel form .btn {
+    width: 170px;
+    font-size: 1.7em;
+  }
+  .signUp .signUpPanel form a {
+    font-size: 1.7em;
+  }
+}
+
+.addCustomer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100vh;
+  background: url(../img/mainMINI.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.addCustomer .addedCustomer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 13%;
+  right: -250px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 250px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background-color: #323232;
+  height: 110px;
+}
+
+.addCustomer .addedCustomer p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 1em;
+}
+
+.addCustomer .addedCustomer p a {
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.addCustomer .active {
+  right: 0;
+}
+
+.addCustomer .addCustomerHeader {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addCustomer .addCustomerHeader p {
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.addCustomer .addCustomerHeader i {
+  padding: 0 10px;
+  font-size: 2.5em;
+  color: white;
+}
+
+.addCustomer .addCustomerPanel {
+  padding: 20px 0;
+}
+
+.addCustomer .addCustomerPanel form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.addCustomer .addCustomerPanel form input {
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  font-size: 1.1em;
+  outline: none;
+}
+
+.addCustomer .addCustomerPanel form input::-webkit-input-placeholder {
+  color: white;
+}
+
+.addCustomer .addCustomerPanel form input:-ms-input-placeholder {
+  color: white;
+}
+
+.addCustomer .addCustomerPanel form input::-ms-input-placeholder {
+  color: white;
+}
+
+.addCustomer .addCustomerPanel form input::placeholder {
+  color: white;
+}
+
+.addCustomer .addCustomerPanel form .btn {
+  width: 100px;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.addCustomer .addCustomerPanel form .btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .addCustomer .addCustomerPanel form input {
+    border-width: 0.5px;
+    border-radius: 0;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+  .addCustomer .addCustomerHeader p {
+    font-size: 1.4em;
+  }
+  .addCustomer .addCustomerHeader i {
+    font-size: 1.9em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 500px) and (max-width: 768px) {
+  .addCustomer .addCustomerHeader p {
+    font-size: 4em;
+  }
+  .addCustomer .addCustomerHeader i {
+    font-size: 5em;
+  }
+  .addCustomer .addCustomerPanel form input {
+    width: 450px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+  .addCustomer .addCustomerPanel form .btn {
+    width: 150px;
+    font-size: 1.7em;
+  }
+  .addCustomer .addCustomerPanel form a {
+    font-size: 1.3em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 769px) and (max-width: 1024px) {
+  .addCustomer .addCustomerHeader p {
+    font-size: 4.2em;
+  }
+  .addCustomer .addCustomerHeader i {
+    font-size: 5.2em;
+  }
+  .addCustomer .addCustomerPanel form input {
+    width: 550px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2.1em;
+  }
+  .addCustomer .addCustomerPanel form .btn {
+    width: 180px;
+    font-size: 2em;
+  }
+  .addCustomer .addCustomerPanel form a {
+    font-size: 1.7em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) and (max-width: 812px) {
+  .addCustomer {
+    background: url(../img/main640.jpg);
+    background-size: cover;
+  }
+  .addCustomer .addedCustomer {
+    width: 200px;
+    right: -200px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 813px) and (max-width: 1280px) {
+  .addCustomer {
+    background: url(../img/main1280.jpg);
+    background-size: cover;
+  }
+  .addCustomer .addedCustomer {
+    right: -250px;
+  }
+  .addCustomer .active {
+    right: 0;
+  }
+  .addCustomer .addCustomerHeader p {
+    font-size: 3em;
+  }
+  .addCustomer .addCustomerHeader i {
+    font-size: 4em;
+  }
+  .addCustomer .addCustomerPanel form input {
+    width: 350px;
+    height: 50px;
+    margin: 10px 0;
+    font-size: 1.7em;
+  }
+  .addCustomer .addCustomerPanel form .btn {
+    font-size: 1.5em;
+    width: 150px;
+  }
+  .addCustomer .addCustomerPanel form a {
+    font-size: 1.3em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1281px) {
+  .addCustomer {
+    background: url(../img/main1920.jpg);
+    background-size: cover;
+  }
+  .addCustomer .addedCustomer {
+    width: 200px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 4px;
+    top: -250px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .addCustomer .active {
+    top: 0;
+  }
+  .addCustomer .addCustomerHeader p {
+    font-size: 3em;
+  }
+  .addCustomer .addCustomerHeader i {
+    font-size: 4em;
+  }
+  .addCustomer .addCustomerPanel form input {
+    width: 450px;
+    height: 70px;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+  .addCustomer .addCustomerPanel form .btn {
+    width: 150px;
+    font-size: 1.7em;
+  }
+  .addCustomer .addCustomerPanel form a {
+    font-size: 1.7em;
+  }
+}
+
+.customers {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #969696, #646464, #323232);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.customers .customersHeader {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customers .customersHeader p {
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.customers .customersHeader i {
+  padding: 0 10px;
+  font-size: 2.5em;
+  color: white;
+}
+
+.customers .searchCustomersPanel {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.customers .searchCustomersPanel .searchCustomer {
+  border-radius: 4px;
+  border: none;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  width: 280px;
+  height: 40px;
+  text-align: center;
+  outline: none;
+}
+
+.customers .customerCards h1 {
+  color: white;
+  font-size: 1.7em;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.customers .customerCards ul {
+  width: 90vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto 0 auto;
+  padding-top: 40px;
+}
+
+.customers .customerCards ul p {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.customers .customerCards ul li {
+  width: 85vw;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+  margin: 10px 0;
+  list-style-type: none;
+  border-radius: 4px;
+  border: 2px solid white;
+  font-size: 1.1em;
+}
+
+.customers .customerCards ul li:hover {
+  color: black;
+  background-color: white;
+}
+
+@media (orientation: portrait) and (max-width: 500px) {
+  .customers .customerCards ul li {
+    font-size: 1em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 500px) and (max-width: 768px) {
+  .customers .customersHeader p {
+    font-size: 4em;
+  }
+  .customers .customersHeader i {
+    font-size: 5em;
+  }
+  .customers .searchCustomersPanel {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .customers .searchCustomersPanel .searchCustomer {
+    width: 500px;
+    height: 60px;
+    font-size: 1.7em;
+  }
+  .customers .customerCards ul p {
+    top: 0;
+    font-size: 2.2em;
+  }
+  .customers .customerCards ul li {
+    font-size: 1.7em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 769px) {
+  .customers .customersHeader p {
+    font-size: 4em;
+  }
+  .customers .customersHeader i {
+    font-size: 5em;
+  }
+  .customers .searchCustomersPanel {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .customers .searchCustomersPanel .searchCustomer {
+    width: 550px;
+    height: 60px;
+    font-size: 1.7em;
+  }
+  .customers .customerCards ul p {
+    top: -5px;
+    left: -5px;
+    font-size: 2.5em;
+  }
+  .customers .customerCards ul li {
+    font-size: 1.9em;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .customers {
+    background: linear-gradient(-45deg, #969696, #646464, #323232);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 641px) and (max-width: 812px) {
+  .customers {
+    background: linear-gradient(-45deg, #969696, #646464, #323232);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 813px) and (max-width: 1280px) {
+  .customers {
+    background: linear-gradient(-45deg, #969696, #646464, #323232);
+  }
+  .customers .customersHeader p {
+    font-size: 3em;
+  }
+  .customers .customersHeader i {
+    font-size: 4em;
+  }
+  .customers .searchCustomersPanel {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .customers .searchCustomersPanel .searchCustomer {
+    width: 500px;
+    height: 60px;
+    font-size: 1.7em;
+  }
+  .customers .customerCards ul p {
+    top: 0;
+    font-size: 2.2em;
+  }
+  .customers .customerCards ul li {
+    font-size: 1.9em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1281px) {
+  .customers {
+    background: url(../img/main1920.jpg);
+    background-size: center;
+    background-attachment: fixed;
+  }
+  .customers .customersHeader p {
+    font-size: 3em;
+  }
+  .customers .customersHeader i {
+    font-size: 4em;
+  }
+  .customers .searchCustomersPanel {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .customers .searchCustomersPanel .searchCustomer {
+    width: 550px;
+    height: 60px;
+    font-size: 1.7em;
+  }
+  .customers .customerCards ul p {
+    top: 0;
+    font-size: 2.2em;
+  }
+  .customers .customerCards ul li {
+    font-size: 2.1em;
+  }
+}
+
+.customerDetails {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #969696, #646464, #323232);
+  padding-bottom: 50px;
+}
+
+.customerDetails .customerHasBeenDeleted,
+.customerDetails .loadingCustomerDetailsPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customerDetails .customerHasBeenDeleted p,
+.customerDetails .loadingCustomerDetailsPage p {
+  color: white;
+  fonts: 1.1em;
+}
+
+.customerDetails .customerNameAndBackBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customerDetails .customerNameAndBackBtn p {
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.customerDetails .customerNameAndBackBtn i {
+  padding: 0 10px;
+  font-size: 2.5em;
+  color: white;
+}
+
+.customerDetails .customerDetailsHeader {
+  padding-top: 10vh;
+}
+
+.customerDetails .phoneCustomer {
+  width: 100%;
+  padding: 20px 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customerDetails .phoneCustomer a {
+  font-size: 1.7em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.customerDetails .phoneCustomer i {
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+}
+
+.customerDetails .btnsPanel {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.customerDetails .btnsPanel .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.7em;
+}
+
+.customerDetails .btnsPanel .btn span {
+  padding-left: 5px;
+  font-size: .6em;
+}
+
+.customerDetails .customerVisits .singleVisit {
+  position: relative;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: 90vw;
+  border: 2px solid white;
+  margin: 50px auto 0 auto;
+  padding: 20px 0 40px 10px;
+}
+
+.customerDetails .customerVisits .singleVisit .singleVisitHeader {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  border: 2px solid white;
+  padding-left: 5px;
+  right: -2px;
+  top: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.customerDetails .customerVisits .singleVisit .singleVisitHeader p {
+  font-size: 0.8em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.customerDetails .customerVisits .singleVisit .singleVisitHeader i {
+  font-size: 1.7em;
+  padding: 0 5px;
+  color: white;
+}
+
+.customerDetails .customerVisits .singleVisit .singleVisitInfo {
+  color: white;
+  font-size: 1.3em;
+}
+
+.customerDetails .customerVisits .singleVisit .createdBy {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  color: white;
+}
+
+.customerDetails .noVisit {
+  padding: 20px;
+  text-align: center;
+}
+
+.customerDetails .noVisit h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.customerDetails .noVisit .addFirstVisit {
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.3em;
+  padding: 5px 10px;
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .customerDetails {
+    background: linear-gradient(-45deg, #969696, #646464, #323232);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 641px) and (max-width: 812px) {
+  .customerDetails {
+    background: linear-gradient(-45deg, #969696, #646464, #323232);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 813px) and (max-width: 1280px) {
+  .customerDetails {
+    background: linear-gradient(-45deg, #969696, #646464, #323232);
+  }
+  .customerDetails .customerNameAndBackBtn p {
+    font-size: 3em;
+  }
+  .customerDetails .customerNameAndBackBtn i {
+    font-size: 4em;
+  }
+  .customerDetails .phoneCustomer {
+    width: 100%;
+    padding: 20px 0 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .customerDetails .phoneCustomer a {
+    font-size: 2.7em;
+  }
+  .customerDetails .phoneCustomer i {
+    font-size: 3em;
+  }
+  .customerDetails .btnsPanel .btn {
+    font-size: 2.2em;
+  }
+  .customerDetails .btnsPanel .btn span {
+    font-size: 0.9em;
+  }
+  .customerDetails .customerVisits .singleVisit .singleVisitHeader p {
+    font-size: 1.2em;
+  }
+  .customerDetails .customerVisits .singleVisit .singleVisitHeader i {
+    font-size: 2.2em;
+  }
+  .customerDetails .customerVisits .singleVisit .singleVisitInfo {
+    font-size: 1.7em;
+  }
+  .customerDetails .customerVisits .singleVisit .createdBy {
+    right: 10px;
+    bottom: 5px;
+  }
+  .customerDetails .noVisit {
+    padding: 20px;
+    text-align: center;
+  }
+  .customerDetails .noVisit h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3em;
+  }
+  .customerDetails .noVisit .addFirstVisit {
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px 10px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1281px) {
+  .customerDetails {
+    background: url(../img/main1920.jpg);
+    background-size: center;
+    background-attachment: fixed;
+  }
+  .customerDetails .customerNameAndBackBtn p {
+    font-size: 3em;
+  }
+  .customerDetails .customerNameAndBackBtn i {
+    font-size: 4em;
+  }
+  .customerDetails .phoneCustomer {
+    width: 100%;
+    padding: 20px 0 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .customerDetails .phoneCustomer a {
+    font-size: 2.7em;
+  }
+  .customerDetails .phoneCustomer i {
+    font-size: 3em;
+  }
+  .customerDetails .btnsPanel .btn {
+    font-size: 2.2em;
+  }
+  .customerDetails .btnsPanel .btn span {
+    font-size: 0.9em;
+  }
+  .customerDetails .customerVisits .singleVisit .singleVisitHeader p {
+    font-size: 1.2em;
+  }
+  .customerDetails .customerVisits .singleVisit .singleVisitHeader i {
+    font-size: 2.2em;
+  }
+  .customerDetails .customerVisits .singleVisit .singleVisitInfo {
+    font-size: 1.7em;
+  }
+  .customerDetails .customerVisits .singleVisit .createdBy {
+    right: 10px;
+    bottom: 5px;
+  }
+  .customerDetails .noVisit {
+    padding: 20px;
+    text-align: center;
+  }
+  .customerDetails .noVisit h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3em;
+  }
+  .customerDetails .noVisit .addFirstVisit {
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px 10px;
+  }
+}
+
+.popUpDeleteCustomer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.popUpDeleteCustomer .confirmDeleteCustomer {
+  width: 500px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  border-radius: 4px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 3px white;
+          box-shadow: 0 0 3px white;
+}
+
+.popUpDeleteCustomer .confirmDeleteCustomer h3 {
+  font-size: 1.4em;
+  color: black;
+  text-align: center;
+  padding: 0 0 20px 0;
+  width: 100%;
+}
+
+.popUpDeleteCustomer .confirmDeleteCustomer .btns {
+  width: 100%;
+  max-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popUpDeleteCustomer .confirmDeleteCustomer .btns button {
+  border-radius: 4px;
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
+  font-size: 1.4em;
+  width: 120px;
+  height: 40px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.popUpDeleteCustomer .confirmDeleteCustomer .btns button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media (orientation: portrait) and (max-width: 767px) {
+  .popUpDeleteCustomer .confirmDeleteCustomer {
+    width: 300px;
+    height: 140px;
+    padding: 10px;
+  }
+  .popUpDeleteCustomer .confirmDeleteCustomer h3 {
+    font-size: 1em;
+    padding: 0 0 10px 0;
+  }
+  .popUpDeleteCustomer .confirmDeleteCustomer .btns {
+    max-height: 60px;
+  }
+  .popUpDeleteCustomer .confirmDeleteCustomer .btns button {
+    font-size: 1em;
+    width: 80px;
+    height: 30px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 823px) {
+  .popUpDeleteCustomer .confirmDeleteCustomer {
+    width: 300px;
+    height: 140px;
+    padding: 10px;
+  }
+  .popUpDeleteCustomer .confirmDeleteCustomer h3 {
+    font-size: 1em;
+    padding: 0 0 10px 0;
+  }
+  .popUpDeleteCustomer .confirmDeleteCustomer .btns {
+    max-height: 60px;
+  }
+  .popUpDeleteCustomer .confirmDeleteCustomer .btns button {
+    font-size: 1em;
+    width: 80px;
+    height: 30px;
+  }
+}
+
+.addVisit_popUp {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.addVisit_popUp .color_popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.addVisit_popUp .color_popUp .colorForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  height: 150px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.addVisit_popUp .color_popUp .colorForm .exit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.addVisit_popUp .color_popUp .colorForm .colorInput {
+  margin: 20px auto;
+  padding: 0 5px;
+  width: 200px;
+  height: 40px;
+  font-size: 1em;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: black;
+  outline: none;
+}
+
+.addVisit_popUp .color_popUp .colorForm .colorInput::-webkit-input-placeholder {
+  color: black;
+}
+
+.addVisit_popUp .color_popUp .colorForm .colorInput:-ms-input-placeholder {
+  color: black;
+}
+
+.addVisit_popUp .color_popUp .colorForm .colorInput::-ms-input-placeholder {
+  color: black;
+}
+
+.addVisit_popUp .color_popUp .colorForm .colorInput::placeholder {
+  color: black;
+}
+
+.addVisit_popUp .color_popUp .colorForm .colorSubmit {
+  margin-bottom: 20px;
+  width: 100px;
+  padding: 0 5px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 1em;
+  cursor: pointer;
+  border: 2px solid black;
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.addVisit_popUp .color_popUp .colorForm .colorSubmit:hover {
+  color: white;
+  background-color: black;
+}
+
+.addVisit_popUp .addVisitPanel {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.addVisit_popUp .addVisitPanel .exit,
+.addVisit_popUp .addVisitPanel .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.addVisit_popUp .addVisitPanel .exit:hover,
+.addVisit_popUp .addVisitPanel .back:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.addVisit_popUp .addVisitPanel .back {
+  left: 10px !important;
+}
+
+.addVisit_popUp .addVisitPanel .datapicker,
+.addVisit_popUp .addVisitPanel .services {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.addVisit_popUp .addVisitPanel .datapicker .datapickerText,
+.addVisit_popUp .addVisitPanel .datapicker .servicesText,
+.addVisit_popUp .addVisitPanel .services .datapickerText,
+.addVisit_popUp .addVisitPanel .services .servicesText {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 20px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.addVisit_popUp .addVisitPanel .datapicker .datapickerInput,
+.addVisit_popUp .addVisitPanel .services .datapickerInput {
+  margin: 20px auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+  outline: none;
+}
+
+.addVisit_popUp .addVisitPanel .datapicker .datapickerSubmit,
+.addVisit_popUp .addVisitPanel .datapicker .servicesSubmit,
+.addVisit_popUp .addVisitPanel .services .datapickerSubmit,
+.addVisit_popUp .addVisitPanel .services .servicesSubmit {
+  margin-bottom: 40px;
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid black;
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.addVisit_popUp .addVisitPanel .datapicker .servicesSubmit,
+.addVisit_popUp .addVisitPanel .services .servicesSubmit {
+  width: 160px !important;
+}
+
+.addVisit_popUp .addVisitPanel .serviceBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+.addVisit_popUp .addVisitPanel .serviceBtns p {
+  color: black;
+  text-align: center;
+}
+
+.addVisit_popUp .addVisitPanel .serviceBtns .btn {
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.addVisit_popUp .addVisitPanel .serviceBtns .btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  font-weight: bold;
+}
+
+.addVisit_popUp .addVisitPanel .serviceBtns .active {
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (orientation: portrait) and (max-width: 767px) {
+  .addVisit_popUp .color_popUp .colorForm {
+    width: 300px;
+  }
+  .addVisit_popUp .color_popUp .colorForm .exit {
+    top: 5px;
+    right: 5px;
+  }
+  .addVisit_popUp .addVisitPanel {
+    width: 300px;
+    height: 300px;
+  }
+  .addVisit_popUp .addVisitPanel .exit,
+  .addVisit_popUp .addVisitPanel .back {
+    top: 5px;
+    right: 5px;
+  }
+  .addVisit_popUp .addVisitPanel .back {
+    left: 5px !important;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .datapickerText,
+  .addVisit_popUp .addVisitPanel .services .datapickerText {
+    margin-top: 40px;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .servicesText,
+  .addVisit_popUp .addVisitPanel .services .servicesText {
+    margin-top: 20px;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .datapickerSubmit,
+  .addVisit_popUp .addVisitPanel .services .datapickerSubmit {
+    margin-bottom: 40px;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .servicesSubmit,
+  .addVisit_popUp .addVisitPanel .services .servicesSubmit {
+    margin-bottom: 20px;
+  }
+  .addVisit_popUp .addVisitPanel .serviceBtns {
+    padding: 10px;
+  }
+  .addVisit_popUp .addVisitPanel .serviceBtns .btn {
+    padding: 5px 10px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 823px) {
+  .addVisit_popUp .color_popUp .colorForm {
+    width: 300px;
+  }
+  .addVisit_popUp .color_popUp .colorForm .exit {
+    top: 5px;
+    right: 5px;
+  }
+  .addVisit_popUp .addVisitPanel {
+    width: 400px;
+    height: 250px;
+  }
+  .addVisit_popUp .addVisitPanel .exit,
+  .addVisit_popUp .addVisitPanel .back {
+    top: 5px;
+    right: 5px;
+  }
+  .addVisit_popUp .addVisitPanel .back {
+    left: 5px !important;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .datapickerText,
+  .addVisit_popUp .addVisitPanel .services .datapickerText {
+    margin-top: 40px;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .servicesText,
+  .addVisit_popUp .addVisitPanel .services .servicesText {
+    margin-top: 20px;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .datapickerSubmit,
+  .addVisit_popUp .addVisitPanel .services .datapickerSubmit {
+    margin-bottom: 40px;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker:hover,
+  .addVisit_popUp .addVisitPanel .services:hover {
+    background-color: black;
+    color: white;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker .servicesSubmit,
+  .addVisit_popUp .addVisitPanel .services .servicesSubmit {
+    margin-bottom: 20px;
+  }
+  .addVisit_popUp .addVisitPanel .datapicker:hover,
+  .addVisit_popUp .addVisitPanel .services:hover {
+    background-color: black;
+    color: white;
+  }
+  .addVisit_popUp .addVisitPanel .serviceBtns {
+    padding: 10px;
+  }
+  .addVisit_popUp .addVisitPanel .serviceBtns .btn {
+    padding: 5px 10px;
+  }
+}
+
+.popUpDeleteVisit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.popUpDeleteVisit .confirmDeleteVisit {
+  width: 500px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  border-radius: 4px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 3px white;
+          box-shadow: 0 0 3px white;
+}
+
+.popUpDeleteVisit .confirmDeleteVisit h3 {
+  font-size: 1.4em;
+  color: black;
+  text-align: center;
+  padding: 0 0 20px 0;
+  width: 100%;
+}
+
+.popUpDeleteVisit .confirmDeleteVisit .btnsDeleteVisit {
+  width: 100%;
+  max-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popUpDeleteVisit .confirmDeleteVisit .btnsDeleteVisit button {
+  border-radius: 4px;
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
+  font-size: 1.4em;
+  width: 120px;
+  height: 40px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.popUpDeleteVisit .confirmDeleteVisit .btnsDeleteVisit button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media (orientation: portrait) and (max-width: 767px) {
+  .popUpDeleteVisit .confirmDeleteVisit {
+    width: 300px;
+    height: 140px;
+    padding: 10px;
+  }
+  .popUpDeleteVisit .confirmDeleteVisit h3 {
+    font-size: 1em;
+    padding: 0 0 10px 0;
+  }
+  .popUpDeleteVisit .confirmDeleteVisit .btns {
+    max-height: 60px;
+  }
+  .popUpDeleteVisit .confirmDeleteVisit .btns button {
+    font-size: 1em;
+    width: 80px;
+    height: 30px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 823px) {
+  .popUpDeleteVisit .confirmDeleteVisit {
+    width: 300px;
+    height: 140px;
+    padding: 10px;
+  }
+  .popUpDeleteVisit .confirmDeleteVisit h3 {
+    font-size: 1em;
+    padding: 0 0 10px 0;
+  }
+  .popUpDeleteVisit .confirmDeleteVisit .btnsDeleteVisit {
+    max-height: 60px;
+  }
+  .popUpDeleteVisit .confirmDeleteVisit .btnsDeleteVisit button {
+    font-size: 1em;
+    width: 80px;
+    height: 30px;
+  }
+}
+
+.authError_popUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 350px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+.authError_popUp .authErrorText {
+  text-align: center;
+  color: darkred;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+@media (min-width: 450px) {
+  .authError_popUp {
+    width: 600px;
+    height: 80px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,252 @@
+.addCustomer
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    height: 100vh
+    background: url(../img/mainMINI.png) no-repeat
+    background-size: cover
+    background-attachment: fixed
+
+    & .addedCustomer
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        position: fixed
+        top: 13%
+        right: -250px
+        border-top-left-radius: 4px
+        border-bottom-left-radius: 4px
+        width: 250px
+        transition: .3s
+        background-color: rgb(50,50,50)
+        height: 110px
+        z-index: 
+
+        & p
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            color: white
+            font-size: 1em
+
+            & a
+                color: red
+                text-decoration: none
+                text-transform: uppercase
+                font-size: 1.2em
+                font-weight: bold
+                letter-spacing: 1px 
+                cursor: pointer
+
+    & .active
+        right: 0
+
+    & .addCustomerHeader
+        position: absolute
+        top: 10px
+        left: 10px
+        height: 10vh
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        & p
+            font-size: $mobileHeaderFontSize
+            color: white
+            text-transform: uppercase
+            letter-spacing: 2px
+
+        & i
+            padding: 0 10px
+            font-size: $mobileIconFontSize
+            color: white
+
+    & .addCustomerPanel
+        padding: 20px 0
+
+        & form
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+            & input
+                width: 200px
+                height: 40px
+                background-color: transparent
+                border: none
+                border-bottom: 2px solid white
+                margin: 10px 0
+                color: white
+                text-align: center
+                font-size: $mobileBtnFontSize
+                outline: none
+
+                &::placeholder
+                    color: white
+
+            & .btn
+                width: 100px
+                border: 2px solid white
+                border-radius: 4px
+                font-size: $mobileBtnFontSize
+                cursor: pointer
+
+                &:hover
+                    transform: scale(1.05)
+    
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2)
+    .addCustomer
+        & .addCustomerHeader
+        & .addCustomerPanel
+            & form
+                & input
+                    border-width: 0.5px;
+                    border-radius: 0
+
+
+@media (orientation: portrait) and ( max-width: 360px)
+    .addCustomer
+        & .addCustomerHeader
+            & p
+                font-size: 1.4em
+
+            & i
+                font-size: 1.9em     
+
+@media (orientation: portrait) and ( min-width: 500px ) and (max-width: 768px)
+    .addCustomer
+        & .addCustomerHeader
+            & p
+                font-size: 4em
+
+            & i
+                font-size: 5em
+
+        & .addCustomerPanel
+            & form
+                & input
+                    width: 450px
+                    height: 70px
+                    margin: 10px 0
+                    font-size: 2em
+
+                & .btn
+                    width: 150px
+                    font-size: 1.7em
+
+                & a
+                    font-size: 1.3em
+
+@media (orientation: portrait) and ( min-width: 769px ) and (max-width: 1024px)
+    .addCustomer
+        & .addCustomerHeader
+            & p
+                font-size: 4.2em
+
+            & i
+                font-size: 5.2em
+
+        & .addCustomerPanel
+            & form
+                & input
+                    width: 550px
+                    height: 70px
+                    margin: 10px 0
+                    font-size: 2.1em
+
+                & .btn
+                    width: 180px
+                    font-size: 2em
+
+                & a
+                    font-size: 1.7em
+
+@media (orientation: landscape) and ( min-width: 640px ) and (max-width: 812px)
+    .addCustomer
+        background: url(../img/main640.jpg)
+        background-size: cover
+
+        & .addedCustomer
+            width: 200px
+            right: -200px
+
+@media (orientation: landscape) and ( min-width: 813px ) and (max-width: 1280px)
+    .addCustomer
+        background: url(../img/main1280.jpg)
+        background-size: cover
+
+        & .addedCustomer
+            right: -250px
+
+        & .active
+            right: 0
+            
+
+        & .addCustomerHeader
+            & p
+                font-size: 3em
+
+            & i
+                font-size: 4em
+
+        & .addCustomerPanel
+            & form
+                & input
+                    width: 350px
+                    height: 50px
+                    margin: 10px 0
+                    font-size: 1.7em
+
+                & .btn
+                    font-size: 1.5em
+                    width: 150px
+
+                & a
+                    font-size: 1.3em
+
+@media (orientation: landscape) and ( min-width: 1281px )
+    .addCustomer
+        background: url(../img/main1920.jpg)
+        background-size: cover
+
+        & .addedCustomer
+            width: 200px
+            border-top-left-radius: 0
+            border-bottom-right-radius: 4px
+            top: -250px
+            left: 50%
+            transform: translateX(-50%)
+        
+        & .active
+            top: 0
+
+        & .addCustomerHeader
+            & p
+                font-size: 3em
+
+            & i
+                font-size: 4em
+
+        & .addCustomerPanel
+            & form
+                & input
+                    width: 450px
+                    height: 70px
+                    margin: 10px 0
+                    font-size: 2em
+
+                & .btn
+                    width: 150px
+                    font-size: 1.7em
+                
+                & a
+                    font-size: 1.7em
+                    
+
+    
+

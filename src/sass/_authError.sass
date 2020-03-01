@@ -1,0 +1,25 @@
+.authError_popUp
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 20%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 350px
+    height: 100px
+    background-color: rgba(255,255,255,.8)
+    border-radius: 4px
+
+    & .authErrorText
+        text-align: center
+        color: darkred
+        font-weight: bold
+        letter-spacing: 1px
+        font-size: 1.1em
+        padding: 10px
+
+@media  ( min-width: 450px )
+    .authError_popUp
+        width: 600px
+        height: 80px
