@@ -6,9 +6,9 @@ class AddCustomer extends Component {
     state = {
         firstName: '',
         lastName: '',
-        phoneNumber: '',
-        clickedKey: ''
+        phoneNumber: ''
     }
+    clickedKey = ''
 
     componentDidMount() {
         window.addEventListener('keydown', this.lookingBackspaceKey)
@@ -19,14 +19,13 @@ class AddCustomer extends Component {
     }
 
     lookingBackspaceKey = (e) => {
-        this.setState({
-            clickedKey: e.key
-        })
+        this.clickedKey = e.key
     }
 
 
     handleChange = (e) => {
-        if ((e.target.value.length === 3 || e.target.value.length === 7) && e.target.name === 'phoneNumber' && this.state.clickedKey !== "Backspace") {
+
+        if ((e.target.value.length === 3 || e.target.value.length === 7) && e.target.name === 'phoneNumber' && this.clickedKey !== "Backspace") {
             e.target.value = e.target.value + '-'
         } else if (e.target.value.length === 9 && e.target.name === 'phoneNumber' && !e.target.value.includes('-')) {
             let modifiedPhoneNumber = e.target.value.split('')
@@ -42,18 +41,24 @@ class AddCustomer extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+
         const form = document.querySelector('form')
-        form.firstName.value === '' || form.lastName.value === '' ? alert('Wypełnij wszystkie pola!') : this.props.createCustomer(this.state)
-        // this.props.createCustomer(this.state.users)
-        this.setState({
-            firstName: '',
-            lastName: '',
-            phoneNumber: ''
-        })
-        form.firstName.value = ''
-        form.lastName.value = ''
-        form.phoneNumber.value = ''
+
+        if (form.firstName.value === '' || form.lastName.value === '' || form.phoneNumber.value === '') {
+            alert('Wypełnij wszystkie pola!')
+        } else {
+            this.props.createCustomer(this.state)
+            this.setState({
+                firstName: '',
+                lastName: '',
+                phoneNumber: ''
+            })
+            form.firstName.value = ''
+            form.lastName.value = ''
+            form.phoneNumber.value = ''
+        }
     }
+
     render() {
         return (
             <div className="addCustomer">
