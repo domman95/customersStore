@@ -2,11 +2,42 @@
     margin: 0
     padding: 0
     box-sizing: border-box
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     max-width: 100vw
+
+body:before
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    background: url(../img/mountain-portrait.jpg)
+    background-size: cover
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -10
 
 
 .root
     max-width: 100vw
+
+
+@media (orientation: landscape) and ( max-width: 640px)
+    body:before
+        background: url(../img/640.jpg)
+        background-size: cover
+
+
+@media (orientation: landscape) and ( min-width: 641px) and (max-width: 1280px)
+    body:before
+        background: url(../img/1280.jpg)
+        background-size: cover
+
+@media (orientation: landscape) and ( min-width: 1281px)
+    body:before
+        background: url(../img/1920.jpg)
+        background-size: cover
+
+    
 
 

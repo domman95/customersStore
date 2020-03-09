@@ -9,26 +9,21 @@ import AddVisit from '../visits/AddVisit';
 import { Redirect } from 'react-router-dom';
 
 class CustomerDetails extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            components: {
-                addVisit: false,
-                deleteCustomer: false
-            }
-        };
+    state = {
+        components: {
+            addVisit: false,
+            deleteCustomer: false
+        }
+    };
 
-        this._onButtonClick = this._onButtonClick.bind(this)
-        this._closeChild = this._closeChild.bind(this)
-    }
 
-    _closeChild(e) {
+    closeChild = (e) => {
         this.setState({
             components: !this.state.components
         })
     }
 
-    _onButtonClick(e) {
+    onButtonClick = (e) => {
         this.setState({
             components: {
                 [e.target.parentNode.id]: true,
@@ -45,7 +40,7 @@ class CustomerDetails extends Component {
             return (
                 <div className="customerDetails">
                     <div className="customerNameAndBackBtn">
-                        <i className="material-icons" onClick={() => { this.props.history.push('/customers') }} style={{ cursor: 'pointer' }} >arrow_back</i>
+                        <button className="material-icons" onClick={() => { this.props.history.push('/customers') }} style={{ cursor: 'pointer' }} >arrow_back</button>
                         <p>{`${customer.fullName.split(' ').reverse().toString().replace(',', ' ')}`}</p>
                     </div>
                     <div className="customerDetailsHeader">
@@ -54,13 +49,13 @@ class CustomerDetails extends Component {
                             <a href={`tel:+48${customer.phoneNumber}`}>{customer.phoneNumber}</a>
                         </div>
                         <div className="btnsPanel">
-                            <i className="material-icons btn" id="addVisit" onClick={this._onButtonClick} style={{ cursor: 'pointer' }}>add <span>Dodaj wizytę</span></i>
-                            <i className="material-icons btn" id="deleteCustomer" onClick={this._onButtonClick} style={{ cursor: 'pointer' }}>delete <span>Usuń klienta</span></i>
+                            <button className="material-icons btn" id="addVisit" onClick={this.onButtonClick} style={{ cursor: 'pointer' }}>add <span>Dodaj wizytę</span></button>
+                            <button className="material-icons btn" id="deleteCustomer" onClick={this.onButtonClick} style={{ cursor: 'pointer' }}>delete <span>Usuń klienta</span></button>
                         </div>
                     </div>
 
-                    <CustomerVisit id={this.props.match.params.id} addVisit={this._onButtonClick} customer={this.props.customer} />
-                    {this.state.components.addVisit ? <AddVisit onClose={this._closeChild} id={this.props.match.params.id} /> : this.state.components.deleteCustomer ? <DeleteCustomer onClose={this._closeChild} customer={customer} id={this.props.match.params.id} props={this.props} /> : null}
+                    <CustomerVisit id={this.props.match.params.id} addVisit={this.onButtonClick} customer={this.props.customer} />
+                    {this.state.components.addVisit ? <AddVisit onClose={this.closeChild} id={this.props.match.params.id} /> : this.state.components.deleteCustomer ? <DeleteCustomer onClose={this.closeChild} customer={customer} id={this.props.match.params.id} props={this.props} /> : null}
                 </div>
             )
         } else if (customer === undefined) {

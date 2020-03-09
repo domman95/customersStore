@@ -4,9 +4,7 @@
     align-items: center
     position: relative
     height: 100vh
-    background: url(../img/mainMINI.png) no-repeat
-    background-size: cover
-    background-attachment: fixed
+    background-color: transparent
 
     & .signUpHeader
         position: absolute
@@ -23,7 +21,9 @@
             text-transform: uppercase
             letter-spacing: 2px
 
-        & i
+        & button
+            background-color: transparent
+            border: none
             padding: 0 10px
             font-size: $mobileIconFontSize
             color: white
@@ -38,30 +38,30 @@
             flex-direction: column
 
             & input
-                width: 200px
+                width: 250px
                 height: 40px
-                background-color: transparent
+                background-color: rgba(211,211,211,.8)
                 border: none
-                border-bottom: 2px solid white
                 margin: 10px 0
-                color: white
+                color: black
                 text-align: center
                 font-size: $mobileBtnFontSize
                 outline: none
 
                 &::placeholder
-                    color: white
+                    color: black
 
             & .btn
-                width: 120px
-                border: 2px solid white
-                border-radius: 4px
-                font-size: $mobileBtnFontSize
+                border: none
+                margin: 10px 0 20px 0
+                background-color: gainsboro
+                padding: 10px 25px
+                box-shadow: 1px 1px 2px dimgray
+                font-size: 1.2em
                 cursor: pointer
+                color: black
+                outline: none
 
-                &:hover
-                    transform: scale(1.05)
-    
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2)
     .signUp
@@ -78,7 +78,7 @@
             & p
                 font-size: 4em
 
-            & i
+            & button
                 font-size: 5em
 
         & .signUpPanel
@@ -102,7 +102,7 @@
             & p
                 font-size: 4.2em
 
-            & i
+            & button
                 font-size: 5.2em
 
         & .signUpPanel
@@ -120,21 +120,14 @@
                 & a
                     font-size: 1.7em
 
-@media (orientation: landscape) and ( min-width: 640px ) and (max-width: 812px)
-    .signUp
-        background: url(../img/main640.jpg)
-        background-size: cover
 
 @media (orientation: landscape) and ( min-width: 813px ) and (max-width: 1280px)
     .signUp
-        background: url(../img/main1280.jpg)
-        background-size: cover
-
         & .signUpHeader
             & p
                 font-size: 3em
 
-            & i
+            & button
                 font-size: 4em
 
         & .signUpPanel
@@ -154,14 +147,11 @@
 
 @media (orientation: landscape) and ( min-width: 1281px )
     .signUp
-        background: url(../img/main1920.jpg)
-        background-size: cover
-
         & .signUpHeader
             & p
                 font-size: 3em
 
-            & i
+            & button
                 font-size: 4em
 
         & .signUpPanel
@@ -173,7 +163,7 @@
                     font-size: 2em
 
                 & .btn
-                    width: 170px
+                    width: 210px
                     font-size: 1.7em
                 
                 & a

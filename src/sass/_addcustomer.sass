@@ -4,9 +4,8 @@
     align-items: center
     position: relative
     height: 100vh
-    background: url(../img/mainMINI.png) no-repeat
-    background-size: cover
-    background-attachment: fixed
+    background-color: transparent
+    overflow: hidden
 
     & .addedCustomer
         display: flex
@@ -59,7 +58,9 @@
             text-transform: uppercase
             letter-spacing: 2px
 
-        & i
+        & button
+            background-color: transparent
+            border: none
             padding: 0 10px
             font-size: $mobileIconFontSize
             color: white
@@ -74,29 +75,29 @@
             flex-direction: column
 
             & input
-                width: 200px
+                width: 250px
                 height: 40px
-                background-color: transparent
+                background-color: rgba(211,211,211,.8)
                 border: none
-                border-bottom: 2px solid white
                 margin: 10px 0
-                color: white
+                color: black
                 text-align: center
                 font-size: $mobileBtnFontSize
                 outline: none
 
                 &::placeholder
-                    color: white
+                    color: black
 
             & .btn
-                width: 100px
-                border: 2px solid white
-                border-radius: 4px
-                font-size: $mobileBtnFontSize
+                border: none
+                margin: 10px 0 20px 0
+                background-color: gainsboro
+                padding: 10px 25px
+                box-shadow: 1px 1px 2px dimgray
+                font-size: 1.2em
                 cursor: pointer
-
-                &:hover
-                    transform: scale(1.05)
+                color: black
+                outline: none
     
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2)
@@ -167,19 +168,12 @@
                     font-size: 1.7em
 
 @media (orientation: landscape) and ( min-width: 640px ) and (max-width: 812px)
-    .addCustomer
-        background: url(../img/main640.jpg)
-        background-size: cover
-
-        & .addedCustomer
-            width: 200px
-            right: -200px
+    & .addedCustomer
+        width: 200px
+        right: -200px
 
 @media (orientation: landscape) and ( min-width: 813px ) and (max-width: 1280px)
     .addCustomer
-        background: url(../img/main1280.jpg)
-        background-size: cover
-
         & .addedCustomer
             right: -250px
 
@@ -211,9 +205,6 @@
 
 @media (orientation: landscape) and ( min-width: 1281px )
     .addCustomer
-        background: url(../img/main1920.jpg)
-        background-size: cover
-
         & .addedCustomer
             width: 200px
             border-top-left-radius: 0

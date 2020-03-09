@@ -4,9 +4,7 @@
     align-items: center
     position: relative
     height: 100vh
-    background: url(../img/mainMINI.png) no-repeat
-    background-size: cover
-    background-attachment: fixed
+    background-color: transparent
 
     & .signInHeader
         position: absolute
@@ -38,29 +36,38 @@
             flex-direction: column
 
             & input
-                width: 200px
-                height: 40px
-                background-color: transparent
                 border: none
-                border-bottom: 2px solid white
+                width: 250px
+                height: 40px
+                background-color: rgba(211,211,211,.8)
                 margin: 10px 0
-                color: white
+                color: black
                 text-align: center
                 font-size: $mobileBtnFontSize
                 outline: none
 
                 &::placeholder
-                    color: white
+                    color: black
 
             & .btn
-                width: 100px
-                border: 2px solid white
-                border-radius: 4px
-                font-size: $mobileBtnFontSize
+                margin: 10px 0 20px 0
+                border: none
+                padding: 10px 25px
+                background-color: gainsboro
+                box-shadow: 1px 1px 2px dimgray
+                font-size: 1.2em
                 cursor: pointer
+                color: black
+                outline: none
+            
+            & a
+                color: white
+                text-decoration: none
 
-                &:hover
-                    transform: scale(1.05)
+                & span
+                    color: red
+                    font-weight: bold
+                    font-size: 1.2em
     
 @media only screen and (-webkit-min-device-pixel-ratio: 2)
     .signIn
@@ -119,16 +126,9 @@
                 & a
                     font-size: 1.7em
 
-@media (orientation: landscape) and ( min-width: 640px ) and (max-width: 812px)
-    .signIn
-        background: url(../img/main640.jpg)
-        background-size: cover
 
 @media (orientation: landscape) and ( min-width: 813px ) and (max-width: 1280px)
     .signIn
-        background: url(../img/main1280.jpg)
-        background-size: cover
-
         & .signInHeader
             & p
                 font-size: 3em
@@ -153,9 +153,6 @@
 
 @media (orientation: landscape) and ( min-width: 1281px )
     .signIn
-        background: url(../img/main1920.jpg)
-        background-size: cover
-
         & .signInHeader
             & p
                 font-size: 3em
@@ -172,7 +169,7 @@
                     font-size: 2em
 
                 & .btn
-                    width: 150px
+                    width: 190px
                     font-size: 1.7em
                 
                 & a

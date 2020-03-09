@@ -57,7 +57,7 @@ class CustomerVisit extends Component {
                             <div className="singleVisit" key={visit.id} id={visit.id}>
                                 <div className="singleVisitHeader">
                                     <p className="singleVisitText">Data wizyty: {fullDate}</p>
-                                    <i className="material-icons deleteBtn" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); this.setState({ deleteVisit: true, id: visit.id, time: fullDate }) }}>delete</i>
+                                    <button className="material-icons deleteBtn" style={{ cursor: 'pointer' }} onClick={(e) => { e.preventDefault(); this.setState({ deleteVisit: true, id: visit.id, time: fullDate }) }}>delete</button>
                                 </div>
 
                                 {visit.visit[0].activeUser ? (<p className="createdBy">Utworzone przez: {visit.visit[0].activeUser.firstName} {visit.visit[0].activeUser.lastName}</p>) : null}

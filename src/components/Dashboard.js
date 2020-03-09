@@ -1,44 +1,39 @@
 import React from 'react'
-import Navbar from './layouts/Navbar'
+import { Spring } from 'react-spring/renderprops'
 import { connect } from 'react-redux'
+import SignedOutLinks from './layouts/SignedOutLinks'
+import SignedInLinks from './layouts/SignedInLinks'
 
 class Dashboard extends React.Component {
 
 
-    handleClick = () => {
-        document.querySelector('.navbar').classList.toggle('active')
-    }
-
     render() {
-
         const { user } = this.props
 
-        if (user.firstName) {
-            return (
-                <div className="dashboard">
-                    <i className="material-icons menuBtn" onClick={this.handleClick} >menu</i>
-                    <Navbar />
-                    <div className="header">
-                        <p>Witaj, </p>
-                        <p>{user.firstName}!</p>
-                    </div>
-                </div>
-            )
-        } else {
-            return (
-                <div className="dashboard">
-                    <i className="material-icons menuBtn" onClick={this.handleClick} >menu</i>
-                    <Navbar />
-                    <div className="header">
-                        <div className="headerText">
+        return (
+            <div className="dashboard">
+                <Spring
+                    from={{ opacity: 0, left: -500 }}
+                    to={{ opacity: 1, left: 0 }}
+                    config={{ duration: 1000 }}
+                >
+                    {props =>
+                        <div className="header" style={props}>
                             <p>Twoje miejsce</p>
                             <p>do zarządzania</p>
                             <p>klientami</p>
                         </div>
-                    </div>
-                </div>
-            )
-        }
+                    }
+                </Spring>
+                <Spring
+                    from={{ opacity: 0, transform: 'scale(0)' }}
+                    to={{ opacity: 1, transform: 'scale(1)' }}
+                >
+                    {props => user.firstName ? <SignedInLinks style={props} /> : <SignedOutLinks style={props} />}
+                </Spring>
+            </div>
+        )
+
     }
 }
 

@@ -69,7 +69,7 @@ class AddVisit extends Component {
                     <form className="colorForm">
                         <div onClick={() => { document.querySelector('.color_popUp').style.display = 'none'; this.setState({ closeColor: true, choosenServices: this.state.choosenServices.map(item => { return item.service === 'Koloryzacja' ? item.defaultCheck = false : item }) }); document.querySelector('button[value="Koloryzacja"]').classList.remove('active') }} className="exit"><i className="material-icons">close</i></div>
                         <input className="colorInput" type="text" placeholder="Wpisz kod farby" onChange={(e) => { this.setState({ color: e.target.value }) }} />
-                        <input className="colorSubmit" type="submit" value="Zatwierdź" onClick={this._handleClick} />
+                        <button className="colorSubmit" type="submit" value="Zatwierdź" onClick={this._handleClick}>Zatwierdź</button>
                     </form>
                 </div>
 

@@ -33,8 +33,8 @@ export const createVisit = (visit, id, time, activeUser) => {
         firestore.collection('customers').doc(id).collection('visits').add({
             time, visit, activeUser
         }).then(() => {
-            window.location.reload()
             dispatch({ type: 'CREATE_VISIT', id })
+            window.location.reload()
         }).catch((err) => {
             dispatch({ type: 'CREATE_VISIT_ERROR', err })
         })

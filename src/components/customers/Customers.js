@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CustomerSearch from './CustomerSearch';
 import CustomerCard from './CustomerCard';
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux'
@@ -32,6 +33,7 @@ class Customers extends Component {
                     <p>Lista klientów</p>
                 </div>
                 <CustomerSearch handleChange={handleChange} />
+                <Link to="/addcustomer" style={{ textDecoration: 'none' }}><li className="addCustomerBtn">Dodaj klienta</li></Link>
                 <CustomerCard state={this.state.customers} />
             </div>
         )

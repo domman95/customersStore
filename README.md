@@ -3,24 +3,26 @@ LIVE DEMO: https://customersstore-62a6a.firebaseapp.com/
 login: test@test.com
 password: test123
 
-Aplikacja do zarządzania kartami klienta.
+Application to customer cards management.
 
-Użyte technologie:
+Used technologies:
 
 * REACT
 * REACT-ROUTER
 * REDUX
-* JAVA-SCRIPT
-* FIREBASE (and FIRESTORE)
+* JAVASCRIPT
+* CSS
+* HTML
+* GOOGLE CLOUD FUNCTIONS
 * PREPROCESOR SASS
 
-Opis aplikacji:
+App description:
 
-Aplikacja ma na celu zarządzanie kartami klienta poprzez tworzenie indywidualnej historii, która zawiera dane dotyczące każdorazowej wizyty z uwzględnieniem wykonanych usług.
-W obecnej chwili produkt oferuje takie możliwości jak:
+Application has been created to easy customer cards management. There you can create individual customer card and after each appointment add one including services.
+Present app offers:
 
-- dodawanie klienta do bazy danych
-- przypisywanie indywidualnej wizyty
-- krótki opis przebiegu wizyty
+- adding customer to data base
+- adding individual appointment
+- short description of each appointment
 
-Aplikacja powstała w ramach nauki programowania i przygotowania do pierwszej pracy jako Junior Front-end Developer oraz na potrzeby lokalnego salonu fryzjerskiego, który podjął się współpracy przy wdrożeniu i testowaniu produktu.
+The app has been wrote as part of learning and looking first job as Junior Front-end Developer. 

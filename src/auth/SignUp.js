@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Spring } from 'react-spring/renderprops'
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../store/actions/authActions'
@@ -34,6 +35,8 @@ class SignUp extends Component {
         this.setState({ error: false })
     }
 
+
+
     render() {
         const { auth, authError } = this.props
         const { error } = this.state
@@ -41,18 +44,25 @@ class SignUp extends Component {
         return (
             <div className="signUp">
                 <div className="signUpHeader">
-                    <i className="material-icons" onClick={() => this.props.history.push('/')} style={{ cursor: 'pointer' }} >arrow_back</i>
+                    <button className="material-icons" onClick={() => this.props.history.push('/')} >arrow_back</button>
                     <p>Rejestracja</p>
                 </div>
                 <div className="signUpPanel">
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" name="firstName" onChange={this.handleChange} placeholder="imię" />
-                        <input type="text" name="lastName" onChange={this.handleChange} placeholder="nazwisko" />
-                        <input type="e-mail" name="email" onChange={this.handleChange} placeholder="e-mail" />
-                        <input type="password" name="password" onChange={this.handleChange} placeholder="hasło" />
-                        <input type="submit" className="btn" value="Zarejestruj się" />
-                        {authError && error ? <AuthErrorPopUp authError={authError} closeAuthError={this.closeAuthError} /> : null}
-                    </form>
+                    <Spring
+                        from={{ opacity: 0, transform: 'scale(0)' }}
+                        to={{ opacity: 1, transform: 'scale(1)' }}
+                    >
+                        {props =>
+                            <form onSubmit={this.handleSubmit} style={props}>
+                                <input type="text" name="firstName" onChange={this.handleChange} placeholder="imię" />
+                                <input type="text" name="lastName" onChange={this.handleChange} placeholder="nazwisko" />
+                                <input type="e-mail" name="email" onChange={this.handleChange} placeholder="e-mail" />
+                                <input type="password" name="password" onChange={this.handleChange} placeholder="hasło" />
+                                <button type="submit" className="btn" value="Zarejestruj się">Zarejestruj się</button>
+                                {authError && error ? <AuthErrorPopUp authError={authError} closeAuthError={this.closeAuthError} /> : null}
+                            </form>
+                        }
+                    </Spring>
                 </div>
             </div>
         )

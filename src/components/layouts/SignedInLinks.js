@@ -11,11 +11,11 @@ const SignedInLinks = (props) => {
     }
 
     return (
-        <ul className="signedInLinks">
-            <Link to="/customers" style={{ textDecoration: 'none' }}><li><i className="material-icons">supervisor_account</i> Lista klientów</li></Link>
-            <Link to="/addcustomer" style={{ textDecoration: 'none' }}><li><i className="material-icons">person_add</i> Dodaj klienta</li></Link>
-            <Link to="/" onClick={handleClick} style={{ textDecoration: 'none', cursor: 'pointer' }}><li><i className="material-icons">meeting_room</i> Wyloguj się</li></Link>
+        <ul className="signedInLinks" style={props.style}>
+            <Link to="/customers" style={{ textDecoration: 'none' }}><li>Lista klientów</li></Link>
+            <Link to="/" onClick={handleClick} style={{ textDecoration: 'none', cursor: 'pointer' }}><li>Wyloguj się</li></Link>
         </ul>
+
     )
 }
 
